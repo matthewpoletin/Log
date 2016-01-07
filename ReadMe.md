@@ -1,0 +1,1 @@
+# Simple Log for any purposes
