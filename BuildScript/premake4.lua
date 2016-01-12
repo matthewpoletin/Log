@@ -36,7 +36,7 @@ solution("Log")
 	if(premake_ver == 5) then
 		startproject("Tests")
 	end
-	location(working_dir .. "Log/")
+	location(working_dir .. "Source/")
 	includedirs { working_dir .. "Dependencies/Include" }
 
 	if (ide_os == "windows") then
@@ -69,11 +69,11 @@ solution("Log")
 
 		targetname ("Log")
 		if (ide_os == "windows") then targetextension ".lib" end
-		location (working_dir .. "Log")
+		location (working_dir .. "/Source")
 
 		files {
-			working_dir .. "Log" .. "/**.h",
-			working_dir .. "Log" .. "/**.cpp"
+			working_dir .. "Source" .. "/**.h",
+			working_dir .. "Source" .. "/**.cpp"
 		}
 
 		-- links {
@@ -116,7 +116,7 @@ solution("Log")
 			working_dir .. "Tests" .. "/**.cpp"
 		}
 
-		includedirs { working_dir .. "Log" }
+		includedirs { working_dir .. "Source" }
 		links {
 			"Log"
 		}
